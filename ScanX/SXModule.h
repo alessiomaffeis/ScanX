@@ -7,14 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
-
-@protocol SXModuleDelegate <NSObject>
-
-@property (readonly) NSMutableArray *items;
-- (void) storeValue:(NSNumber *) val forMetric:(NSString *) metric;
-
-@end
+#import "SXModuleDelegate.h"
+#import "SXMetric.h"
 
 
 @protocol SXModule <NSObject>
@@ -24,7 +18,7 @@
 @property (readonly) NSString *prefix;
 @property (readonly) NSArray *metrics;
 
-- (void) operation;
+- (void) analyze:(id) item;
 
 @end
 

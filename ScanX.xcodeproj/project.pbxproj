@@ -63,6 +63,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A2A378F175F4E9400B6C814 /* SXModuleDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXModuleDelegate.h; sourceTree = "<group>"; };
+		7A2A3791175F4EC900B6C814 /* SXScannerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXScannerDelegate.h; sourceTree = "<group>"; };
 		7A2A79221758C02E0017F7E0 /* SXScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXScanner.h; sourceTree = "<group>"; };
 		7A2A79231758C02E0017F7E0 /* SXScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXScanner.m; sourceTree = "<group>"; };
 		7A2A79261758C0680017F7E0 /* SXEvaluation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXEvaluation.h; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		7A2A795E1758EB760017F7E0 /* DDTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTypes.m; sourceTree = "<group>"; };
 		7A2A795F1758EB760017F7E0 /* NSString+DDMathParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDMathParsing.h"; sourceTree = "<group>"; };
 		7A2A79601758EB760017F7E0 /* NSString+DDMathParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDMathParsing.m"; sourceTree = "<group>"; };
+		7A33B83D176A010800ED82DB /* SXEvaluationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXEvaluationDelegate.h; sourceTree = "<group>"; };
 		7A9EE51216E76194004770AA /* ScanX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ScanX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A9EE51516E76194004770AA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		7A9EE51816E76194004770AA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -231,11 +234,14 @@
 				7A2A79331758EB760017F7E0 /* DDMathParser */,
 				7A2A79221758C02E0017F7E0 /* SXScanner.h */,
 				7A2A79231758C02E0017F7E0 /* SXScanner.m */,
+				7A2A3791175F4EC900B6C814 /* SXScannerDelegate.h */,
 				7A2A79261758C0680017F7E0 /* SXEvaluation.h */,
 				7A2A79271758C0680017F7E0 /* SXEvaluation.m */,
+				7A33B83D176A010800ED82DB /* SXEvaluationDelegate.h */,
 				7A2A792A1758C0780017F7E0 /* SXMetric.h */,
 				7A2A792B1758C0780017F7E0 /* SXMetric.m */,
 				7A2A792E1758C3E50017F7E0 /* SXModule.h */,
+				7A2A378F175F4E9400B6C814 /* SXModuleDelegate.h */,
 				7A9EE51C16E76194004770AA /* Supporting Files */,
 			);
 			path = ScanX;

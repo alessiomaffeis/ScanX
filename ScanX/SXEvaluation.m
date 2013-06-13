@@ -8,20 +8,26 @@
 
 #import "SXEvaluation.h"
 
-@implementation SXEvaluation
+@implementation SXEvaluation {
+    DDMathEvaluator *_evaluator;
+}
 
-- (id) initWithExpression:(NSString *) expression {
+- (id) initWithName:(NSString *) name andExpression:(NSString *) expression {
     [super init];
     
     if (self) {
+        _name = name;
         _expression = expression;
+        _evaluator = [DDMathEvaluator sharedMathEvaluator];
     }
     return self;
 }
 
-- (NSNumber *) evaluate {
+- (void) evaluateItem:(NSString *) itemId {
     
-    return nil;
+    NSDictionary *metrics = [_delegate metricsForItem:itemId];
+    NSNumber *value = [_evaluator evaluateString:_expression withSubstitutions:metrics];
+    [_delegate storeResult:value forItem:itemId withName:_name];
 }
 
 @end

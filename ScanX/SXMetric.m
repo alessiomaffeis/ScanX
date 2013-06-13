@@ -10,4 +10,16 @@
 
 @implementation SXMetric
 
+- (id) initWithName: (NSString *) name andInfo: (NSString *) info {
+    
+    [super init];
+    
+    if (self) {
+        _name = name;
+        _info = info;
+    }
+    
+    return self;
+}
+
 @end

@@ -8,19 +8,38 @@
 
 #import <Cocoa/Cocoa.h>
 #import "SXModule.h"
+#import "SXScannerDelegate.h"   
 #import "SXEvaluation.h"
 
-@interface SXScanner : NSObject <SXModuleDelegate>
 
-@property (readonly) NSMutableArray *items;
-@property (readonly) NSInteger currentItem;
+
+
+@interface SXScanner : NSObject <SXModuleDelegate, SXEvaluationDelegate>
+
+@property (assign) id <SXScannerDelegate> delegate;
+
+@property (readonly) NSMutableDictionary *items;
 @property (readonly) NSMutableDictionary *modules;
 @property (readonly) NSMutableDictionary *evaluations;
+@property (readonly) NSMutableDictionary *computedMetrics;
+@property (readonly) NSMutableDictionary *computedEvaluations;
 
-- (id) initWithItems:(NSArray *) items;
-- (void) startScanning;
+@property (readonly) NSInteger currentItem;
+
+@property (readonly) BOOL isScanning;
+@property (readonly) BOOL isEvaluating;
+@property (readonly) BOOL hasPerformedScan;
+@property (readonly) BOOL hasPerformedEvaluation;
+
+- (id) initWithItems:(NSDictionary *) items;
+- (BOOL) addItem:(id) item withId:(NSString *) iId;
+- (BOOL) addItems:(NSDictionary *) items;
+- (BOOL) addModule:(id <SXModule>) module withId:(NSString *) mId;
+- (BOOL) addEvaluation:(SXEvaluation *) evaluation withId:(NSString *) eId;
+
+- (BOOL) startScanning;
 - (void) stopScanning;
-- (void) addModule:(id <SXModule>) module withId:(NSString *) mId;
-- (void) addEvaluation:(SXEvaluation *) evaluation withId:(NSString *) eId;
+- (BOOL) startEvaluating;
+- (void) stopEvaluating;
 
 @end

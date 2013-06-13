@@ -7,14 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "SXEvaluationDelegate.h"
 #import "DDMathParser.h"
 
 @interface SXEvaluation : NSObject
 
+@property (assign) id<SXEvaluationDelegate> delegate;
+@property (readonly) NSString *name;
 @property (strong) NSString *expression;
-@property (readonly) NSNumber *value;
 
-- (id) initWithExpression:(NSString *) expression;
-- (NSNumber *) evaluate;
-
+- (id) initWithName:(NSString *) name andExpression:(NSString *) expression;
+- (void) evaluateItem:(NSString *) itemId;
 @end
