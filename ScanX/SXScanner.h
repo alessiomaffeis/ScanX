@@ -24,7 +24,8 @@
 @property (readonly) NSMutableDictionary *computedMetrics;
 @property (readonly) NSMutableDictionary *computedEvaluations;
 
-@property (readonly) NSInteger currentItem;
+@property (readonly) NSUInteger remainingItems;
+@property (readonly) NSUInteger remainingEvaluations;
 
 @property (readonly) BOOL isScanning;
 @property (readonly) BOOL isEvaluating;
@@ -41,5 +42,10 @@
 - (void) stopScanning;
 - (BOOL) startEvaluating;
 - (void) stopEvaluating;
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context;
 
 @end

@@ -87,6 +87,9 @@
         return NO;
     
     _isScanning = YES;
+    
+    [_scanQueue addObserver:self forKeyPath:@"operationCount" options:NSKeyValueObservingOptionNew context:NULL];
+    
     id item;
     id <SXModule> module;
     
@@ -138,6 +141,32 @@
     _isEvaluating = NO;
 }
 
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context {
+    
+    if (object == _scanQueue) {
+        
+        if ([keyPath isEqual:@"operationCount"]) {
+            _remainingItems = (NSUInteger)[change valueForKey:NSKeyValueChangeNewKey];
+            
+            if(_remainingItems == 0)
+                [_delegate scanHasFinished];
+        }
+    }
+    else if (object == _evalQueue) {
+        if ([keyPath isEqual:@"operationCount"]) {
+            _remainingEvaluations = (NSUInteger)[change valueForKey:NSKeyValueChangeNewKey];
+            
+            if(_remainingEvaluations == 0)
+                [_delegate evaluationHasFinished];
+        }
+    }
+}
+
+
 - (void) dealloc {
     
     [_evalQueue release];
@@ -156,8 +185,17 @@
 
 - (void) storeMetrics:(NSDictionary *) metrics forItem:(NSString *) itemId {
     
-    NSMutableDictionary *itemMetrics = [_computedMetrics objectForKey:itemId];
-    [itemMetrics addEntriesFromDictionary:metrics];
+    @synchronized(_computedMetrics) {
+        
+        NSMutableDictionary *itemMetrics = [_computedMetrics objectForKey:itemId];
+    
+        if (itemMetrics == nil) {
+            itemMetrics = [NSMutableDictionary dictionaryWithDictionary:metrics];
+        }
+        else {
+            [itemMetrics addEntriesFromDictionary:metrics];
+        }
+    }
 }
 
 
@@ -170,8 +208,17 @@
 
 - (void) storeResult:(NSNumber *) result forItem:(NSString *) itemId withName:(NSString *) name {
     
-    NSMutableDictionary *itemEvals = [_computedEvaluations objectForKey:itemId];
-    [itemEvals setObject:result forKey:name];
+    @synchronized(_computedEvaluations) {
+    
+        NSMutableDictionary *itemEvals = [_computedEvaluations objectForKey:itemId];
+        
+        if (itemEvals == nil) {
+            itemEvals = [NSMutableDictionary dictionaryWithObject:result forKey:name];
+        }
+        else {
+            [itemEvals setObject:result forKey:name];
+        }
+    }
 }
 
 @end
