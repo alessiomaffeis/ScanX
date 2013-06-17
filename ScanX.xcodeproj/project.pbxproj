@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A2A79241758C02E0017F7E0 /* SXScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79221758C02E0017F7E0 /* SXScanner.h */; };
+		7A2A79241758C02E0017F7E0 /* SXScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79221758C02E0017F7E0 /* SXScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A79251758C02E0017F7E0 /* SXScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A79231758C02E0017F7E0 /* SXScanner.m */; };
-		7A2A79281758C0680017F7E0 /* SXEvaluation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79261758C0680017F7E0 /* SXEvaluation.h */; };
+		7A2A79281758C0680017F7E0 /* SXEvaluation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79261758C0680017F7E0 /* SXEvaluation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A79291758C0680017F7E0 /* SXEvaluation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A79271758C0680017F7E0 /* SXEvaluation.m */; };
-		7A2A792C1758C0780017F7E0 /* SXMetric.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A792A1758C0780017F7E0 /* SXMetric.h */; };
+		7A2A792C1758C0780017F7E0 /* SXMetric.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A792A1758C0780017F7E0 /* SXMetric.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A792D1758C0780017F7E0 /* SXMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A792B1758C0780017F7E0 /* SXMetric.m */; };
 		7A2A79611758EB760017F7E0 /* _DDFunctionContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79341758EB760017F7E0 /* _DDFunctionContainer.h */; };
 		7A2A79621758EB760017F7E0 /* _DDFunctionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A79351758EB760017F7E0 /* _DDFunctionContainer.m */; };
@@ -58,6 +58,10 @@
 		7A2A798B1758EB760017F7E0 /* DDTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A795E1758EB760017F7E0 /* DDTypes.m */; };
 		7A2A798C1758EB760017F7E0 /* NSString+DDMathParsing.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A795F1758EB760017F7E0 /* NSString+DDMathParsing.h */; };
 		7A2A798D1758EB760017F7E0 /* NSString+DDMathParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A79601758EB760017F7E0 /* NSString+DDMathParsing.m */; };
+		7A6583D6176F3112005C45BD /* SXModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A792E1758C3E50017F7E0 /* SXModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A6583D8176F3137005C45BD /* SXScannerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A3791175F4EC900B6C814 /* SXScannerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A6583D9176F3150005C45BD /* SXEvaluationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A33B83D176A010800ED82DB /* SXEvaluationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A6583DA176F3156005C45BD /* SXModuleDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A378F175F4E9400B6C814 /* SXModuleDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A9EE51616E76194004770AA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9EE51516E76194004770AA /* Cocoa.framework */; };
 		7A9EE52016E76194004770AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A9EE51E16E76194004770AA /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
@@ -265,8 +269,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A2A79241758C02E0017F7E0 /* SXScanner.h in Headers */,
+				7A6583D8176F3137005C45BD /* SXScannerDelegate.h in Headers */,
 				7A2A79281758C0680017F7E0 /* SXEvaluation.h in Headers */,
+				7A6583D9176F3150005C45BD /* SXEvaluationDelegate.h in Headers */,
 				7A2A792C1758C0780017F7E0 /* SXMetric.h in Headers */,
+				7A6583D6176F3112005C45BD /* SXModule.h in Headers */,
+				7A6583DA176F3156005C45BD /* SXModuleDelegate.h in Headers */,
 				7A2A79611758EB760017F7E0 /* _DDFunctionContainer.h in Headers */,
 				7A2A79631758EB760017F7E0 /* _DDFunctionExpression.h in Headers */,
 				7A2A79651758EB760017F7E0 /* _DDFunctionTerm.h in Headers */,
@@ -424,6 +432,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SYMROOT = "$(PROJECT_DIR)/build";
 			};
 			name = Debug;
 		};
@@ -446,6 +455,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
+				SYMROOT = "$(PROJECT_DIR)/build";
 			};
 			name = Release;
 		};
@@ -459,7 +469,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScanX/ScanX-Prefix.pch";
 				INFOPLIST_FILE = "ScanX/ScanX-Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks ";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -475,7 +485,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScanX/ScanX-Prefix.pch";
 				INFOPLIST_FILE = "ScanX/ScanX-Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks ";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
