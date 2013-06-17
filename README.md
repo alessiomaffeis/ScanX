@@ -1,4 +1,0 @@
-ScanX
-=====
-
-ScanX Framework

@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'ScanX' target in the 'ScanX' project
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif
