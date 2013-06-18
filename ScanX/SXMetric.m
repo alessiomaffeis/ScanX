@@ -13,13 +13,20 @@
 - (id) initWithName: (NSString *) name andInfo: (NSString *) info {
     
     [super init];
-    
     if (self) {
+        [name retain];
+        [info retain];
         _name = name;
         _info = info;
     }
-    
     return self;
+}
+
+- (void) dealloc {
+    
+    [_name release];
+    [_info release];
+    [super dealloc];
 }
 
 @end

@@ -16,6 +16,8 @@
     [super init];
     
     if (self) {
+        [name retain];
+        [expression retain];
         _name = name;
         _expression = expression;
         _evaluator = [DDMathEvaluator sharedMathEvaluator];
@@ -28,6 +30,13 @@
     NSDictionary *metrics = [_delegate metricsForItem:itemId];
     NSNumber *value = [_evaluator evaluateString:_expression withSubstitutions:metrics];
     [_delegate storeResult:value forItem:itemId withName:_name];
+}
+
+-(void) dealloc {
+    
+    [_name release];
+    [_expression release];
+    [super dealloc];
 }
 
 @end

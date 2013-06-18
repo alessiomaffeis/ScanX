@@ -100,7 +100,7 @@
         for (NSString* modId in _modules) {
 
             module = [_modules objectForKey:modId];
-            [_scanQueue addOperation:[[NSInvocationOperation alloc] initWithTarget:module selector:@selector(analyze:) object:item]];
+            [_scanQueue addOperation:[[NSInvocationOperation alloc] initWithTarget:module selector:@selector(analyze:) object:[NSArray arrayWithObjects:itemId, item, nil]]];
         }
     }
     
@@ -191,6 +191,7 @@
     
         if (itemMetrics == nil) {
             itemMetrics = [NSMutableDictionary dictionaryWithDictionary:metrics];
+            [_computedMetrics setObject:itemMetrics forKey:itemId];
         }
         else {
             [itemMetrics addEntriesFromDictionary:metrics];
@@ -214,6 +215,7 @@
         
         if (itemEvals == nil) {
             itemEvals = [NSMutableDictionary dictionaryWithObject:result forKey:name];
+            [_computedEvaluations setObject:itemEvals forKey:itemId];
         }
         else {
             [itemEvals setObject:result forKey:name];
