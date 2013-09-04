@@ -12,7 +12,7 @@
 
 - (id) initWithName: (NSString *) name andInfo: (NSString *) info {
     
-    [super init];
+    self = [super init];
     if (self) {
         [name retain];
         [info retain];

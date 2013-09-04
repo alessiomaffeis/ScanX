@@ -16,8 +16,7 @@
 
 - (id) init {
     
-    [super init];
-    
+    self = [super init];
     if (self) {
         _items = [[NSMutableDictionary alloc] init];
         _modules = [[NSMutableDictionary alloc] init];
@@ -35,10 +34,18 @@
 
 - (id) initWithItems:(NSDictionary *)items {
     
-    [super init];
+    self = [super init];
     
     if (self) {
-        [self init];
+        _items = [[NSMutableDictionary alloc] init];
+        _modules = [[NSMutableDictionary alloc] init];
+        _evaluations = [[NSMutableDictionary alloc] init];
+        _computedMetrics = [[NSMutableDictionary alloc] init];
+        _computedEvaluations = [[NSMutableDictionary alloc] init];
+        _scanQueue = [[NSOperationQueue alloc] init];
+        _scanQueue.maxConcurrentOperationCount = 1;
+        _evalQueue = [[NSOperationQueue alloc] init];
+        
         [_items addEntriesFromDictionary:items];
     }
     
@@ -93,14 +100,14 @@
     id item;
     id <SXModule> module;
     
-    for (NSString* itemId in _items) {
+    for (NSString *itemId in _items) {
         
         item = [_items objectForKey:itemId];
         
-        for (NSString* modId in _modules) {
+        for (NSString *modId in _modules) {
 
             module = [_modules objectForKey:modId];
-            [_scanQueue addOperation:[[NSInvocationOperation alloc] initWithTarget:module selector:@selector(analyze:) object:[NSArray arrayWithObjects:itemId, item, nil]]];
+            [_scanQueue addOperation:[[[NSInvocationOperation alloc] initWithTarget:module selector:@selector(analyze:) object:[NSArray arrayWithObjects:itemId, item, nil]] autorelease]];
         }
     }
     
@@ -119,16 +126,16 @@
         return NO;
     
     _isEvaluating = YES;
-    id item;
+    // id item;
     SXEvaluation *evaluation;
     
     for (NSString *itemId in _items) {
         
-        item = [_items objectForKey:itemId];
+        // item = [_items objectForKey:itemId];
         for (NSString *evalId in _evaluations)
         {
             evaluation = [_evaluations objectForKey:evalId];
-            [_evalQueue addOperation:[[NSInvocationOperation alloc]initWithTarget:evaluation selector:@selector(evaluate:) object:itemId]];
+            [_evalQueue addOperation:[[[NSInvocationOperation alloc]initWithTarget:evaluation selector:@selector(evaluate:) object:itemId] autorelease]];
         }
     }
 

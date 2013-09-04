@@ -12,8 +12,6 @@
 #import "SXEvaluation.h"
 
 
-
-
 @interface SXScanner : NSObject <SXModuleDelegate, SXEvaluationDelegate>
 
 @property (assign) id <SXScannerDelegate> delegate;

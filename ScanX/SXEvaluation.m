@@ -13,8 +13,8 @@
 }
 
 - (id) initWithName:(NSString *) name andExpression:(NSString *) expression {
-    [super init];
     
+    self = [super init];
     if (self) {
         [name retain];
         [expression retain];

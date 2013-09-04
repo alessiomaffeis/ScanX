@@ -13,50 +13,50 @@
 		7A2A79291758C0680017F7E0 /* SXEvaluation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A79271758C0680017F7E0 /* SXEvaluation.m */; };
 		7A2A792C1758C0780017F7E0 /* SXMetric.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A792A1758C0780017F7E0 /* SXMetric.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A792D1758C0780017F7E0 /* SXMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A792B1758C0780017F7E0 /* SXMetric.m */; };
-		7A2A79611758EB760017F7E0 /* _DDFunctionContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79341758EB760017F7E0 /* _DDFunctionContainer.h */; };
+		7A2A79611758EB760017F7E0 /* _DDFunctionContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79341758EB760017F7E0 /* _DDFunctionContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A79621758EB760017F7E0 /* _DDFunctionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A79351758EB760017F7E0 /* _DDFunctionContainer.m */; };
-		7A2A79631758EB760017F7E0 /* _DDFunctionExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79361758EB760017F7E0 /* _DDFunctionExpression.h */; };
+		7A2A79631758EB760017F7E0 /* _DDFunctionExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79361758EB760017F7E0 /* _DDFunctionExpression.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A79641758EB760017F7E0 /* _DDFunctionExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A79371758EB760017F7E0 /* _DDFunctionExpression.m */; };
-		7A2A79651758EB760017F7E0 /* _DDFunctionTerm.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79381758EB760017F7E0 /* _DDFunctionTerm.h */; };
+		7A2A79651758EB760017F7E0 /* _DDFunctionTerm.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79381758EB760017F7E0 /* _DDFunctionTerm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A79661758EB760017F7E0 /* _DDFunctionTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A79391758EB760017F7E0 /* _DDFunctionTerm.m */; };
-		7A2A79671758EB760017F7E0 /* _DDFunctionUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A793A1758EB760017F7E0 /* _DDFunctionUtilities.h */; };
+		7A2A79671758EB760017F7E0 /* _DDFunctionUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A793A1758EB760017F7E0 /* _DDFunctionUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A79681758EB760017F7E0 /* _DDFunctionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A793B1758EB760017F7E0 /* _DDFunctionUtilities.m */; };
-		7A2A79691758EB760017F7E0 /* _DDGroupTerm.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A793C1758EB760017F7E0 /* _DDGroupTerm.h */; };
+		7A2A79691758EB760017F7E0 /* _DDGroupTerm.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A793C1758EB760017F7E0 /* _DDGroupTerm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A796A1758EB760017F7E0 /* _DDGroupTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A793D1758EB760017F7E0 /* _DDGroupTerm.m */; };
-		7A2A796B1758EB760017F7E0 /* _DDNumberExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A793E1758EB760017F7E0 /* _DDNumberExpression.h */; };
+		7A2A796B1758EB760017F7E0 /* _DDNumberExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A793E1758EB760017F7E0 /* _DDNumberExpression.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A796C1758EB760017F7E0 /* _DDNumberExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A793F1758EB760017F7E0 /* _DDNumberExpression.m */; };
-		7A2A796D1758EB760017F7E0 /* _DDNumberTerm.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79401758EB760017F7E0 /* _DDNumberTerm.h */; };
+		7A2A796D1758EB760017F7E0 /* _DDNumberTerm.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79401758EB760017F7E0 /* _DDNumberTerm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A796E1758EB760017F7E0 /* _DDNumberTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A79411758EB760017F7E0 /* _DDNumberTerm.m */; };
-		7A2A796F1758EB760017F7E0 /* _DDOperatorInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79421758EB760017F7E0 /* _DDOperatorInfo.h */; };
+		7A2A796F1758EB760017F7E0 /* _DDOperatorInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79421758EB760017F7E0 /* _DDOperatorInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A79701758EB760017F7E0 /* _DDOperatorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A79431758EB760017F7E0 /* _DDOperatorInfo.m */; };
-		7A2A79711758EB760017F7E0 /* _DDOperatorTerm.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79441758EB760017F7E0 /* _DDOperatorTerm.h */; };
+		7A2A79711758EB760017F7E0 /* _DDOperatorTerm.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79441758EB760017F7E0 /* _DDOperatorTerm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A79721758EB760017F7E0 /* _DDOperatorTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A79451758EB760017F7E0 /* _DDOperatorTerm.m */; };
-		7A2A79731758EB760017F7E0 /* _DDParserTerm.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79461758EB760017F7E0 /* _DDParserTerm.h */; };
+		7A2A79731758EB760017F7E0 /* _DDParserTerm.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79461758EB760017F7E0 /* _DDParserTerm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A79741758EB760017F7E0 /* _DDParserTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A79471758EB760017F7E0 /* _DDParserTerm.m */; };
-		7A2A79751758EB760017F7E0 /* _DDRewriteRule.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79481758EB760017F7E0 /* _DDRewriteRule.h */; };
+		7A2A79751758EB760017F7E0 /* _DDRewriteRule.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79481758EB760017F7E0 /* _DDRewriteRule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A79761758EB760017F7E0 /* _DDRewriteRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A79491758EB760017F7E0 /* _DDRewriteRule.m */; };
-		7A2A79771758EB760017F7E0 /* _DDVariableExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A794A1758EB760017F7E0 /* _DDVariableExpression.h */; };
+		7A2A79771758EB760017F7E0 /* _DDVariableExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A794A1758EB760017F7E0 /* _DDVariableExpression.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A79781758EB760017F7E0 /* _DDVariableExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A794B1758EB760017F7E0 /* _DDVariableExpression.m */; };
-		7A2A79791758EB760017F7E0 /* _DDVariableTerm.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A794C1758EB760017F7E0 /* _DDVariableTerm.h */; };
+		7A2A79791758EB760017F7E0 /* _DDVariableTerm.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A794C1758EB760017F7E0 /* _DDVariableTerm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A797A1758EB760017F7E0 /* _DDVariableTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A794D1758EB760017F7E0 /* _DDVariableTerm.m */; };
-		7A2A797B1758EB760017F7E0 /* DDExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A794E1758EB760017F7E0 /* DDExpression.h */; };
+		7A2A797B1758EB760017F7E0 /* DDExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A794E1758EB760017F7E0 /* DDExpression.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A797C1758EB760017F7E0 /* DDExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A794F1758EB760017F7E0 /* DDExpression.m */; };
-		7A2A797D1758EB760017F7E0 /* DDMathEvaluator+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79501758EB760017F7E0 /* DDMathEvaluator+Private.h */; };
-		7A2A797E1758EB760017F7E0 /* DDMathEvaluator.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79511758EB760017F7E0 /* DDMathEvaluator.h */; };
+		7A2A797D1758EB760017F7E0 /* DDMathEvaluator+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79501758EB760017F7E0 /* DDMathEvaluator+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A2A797E1758EB760017F7E0 /* DDMathEvaluator.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79511758EB760017F7E0 /* DDMathEvaluator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A797F1758EB760017F7E0 /* DDMathEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A79521758EB760017F7E0 /* DDMathEvaluator.m */; };
-		7A2A79801758EB760017F7E0 /* DDMathParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79531758EB760017F7E0 /* DDMathParser.h */; };
-		7A2A79811758EB760017F7E0 /* DDMathParserMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79541758EB760017F7E0 /* DDMathParserMacros.h */; };
-		7A2A79821758EB760017F7E0 /* DDMathStringToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79551758EB760017F7E0 /* DDMathStringToken.h */; };
+		7A2A79801758EB760017F7E0 /* DDMathParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79531758EB760017F7E0 /* DDMathParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A2A79811758EB760017F7E0 /* DDMathParserMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79541758EB760017F7E0 /* DDMathParserMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A2A79821758EB760017F7E0 /* DDMathStringToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79551758EB760017F7E0 /* DDMathStringToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A79831758EB760017F7E0 /* DDMathStringToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A79561758EB760017F7E0 /* DDMathStringToken.m */; };
-		7A2A79841758EB760017F7E0 /* DDMathStringTokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79571758EB760017F7E0 /* DDMathStringTokenizer.h */; };
+		7A2A79841758EB760017F7E0 /* DDMathStringTokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79571758EB760017F7E0 /* DDMathStringTokenizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A79851758EB760017F7E0 /* DDMathStringTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A79581758EB760017F7E0 /* DDMathStringTokenizer.m */; };
-		7A2A79861758EB760017F7E0 /* DDParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79591758EB760017F7E0 /* DDParser.h */; };
+		7A2A79861758EB760017F7E0 /* DDParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A79591758EB760017F7E0 /* DDParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A79871758EB760017F7E0 /* DDParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A795A1758EB760017F7E0 /* DDParser.m */; };
-		7A2A79881758EB760017F7E0 /* DDParserTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A795B1758EB760017F7E0 /* DDParserTypes.h */; };
+		7A2A79881758EB760017F7E0 /* DDParserTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A795B1758EB760017F7E0 /* DDParserTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A79891758EB760017F7E0 /* DDParserTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A795C1758EB760017F7E0 /* DDParserTypes.m */; };
-		7A2A798A1758EB760017F7E0 /* DDTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A795D1758EB760017F7E0 /* DDTypes.h */; };
+		7A2A798A1758EB760017F7E0 /* DDTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A795D1758EB760017F7E0 /* DDTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A798B1758EB760017F7E0 /* DDTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A795E1758EB760017F7E0 /* DDTypes.m */; };
-		7A2A798C1758EB760017F7E0 /* NSString+DDMathParsing.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A795F1758EB760017F7E0 /* NSString+DDMathParsing.h */; };
+		7A2A798C1758EB760017F7E0 /* NSString+DDMathParsing.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A795F1758EB760017F7E0 /* NSString+DDMathParsing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2A798D1758EB760017F7E0 /* NSString+DDMathParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A79601758EB760017F7E0 /* NSString+DDMathParsing.m */; };
 		7A6583D6176F3112005C45BD /* SXModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A792E1758C3E50017F7E0 /* SXModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A6583D8176F3137005C45BD /* SXScannerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2A3791175F4EC900B6C814 /* SXScannerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -275,6 +275,14 @@
 				7A2A792C1758C0780017F7E0 /* SXMetric.h in Headers */,
 				7A6583D6176F3112005C45BD /* SXModule.h in Headers */,
 				7A6583DA176F3156005C45BD /* SXModuleDelegate.h in Headers */,
+				7A2A79801758EB760017F7E0 /* DDMathParser.h in Headers */,
+				7A2A797B1758EB760017F7E0 /* DDExpression.h in Headers */,
+				7A2A797D1758EB760017F7E0 /* DDMathEvaluator+Private.h in Headers */,
+				7A2A797E1758EB760017F7E0 /* DDMathEvaluator.h in Headers */,
+				7A2A79811758EB760017F7E0 /* DDMathParserMacros.h in Headers */,
+				7A2A79821758EB760017F7E0 /* DDMathStringToken.h in Headers */,
+				7A2A79841758EB760017F7E0 /* DDMathStringTokenizer.h in Headers */,
+				7A2A79861758EB760017F7E0 /* DDParser.h in Headers */,
 				7A2A79611758EB760017F7E0 /* _DDFunctionContainer.h in Headers */,
 				7A2A79631758EB760017F7E0 /* _DDFunctionExpression.h in Headers */,
 				7A2A79651758EB760017F7E0 /* _DDFunctionTerm.h in Headers */,
@@ -288,14 +296,6 @@
 				7A2A79751758EB760017F7E0 /* _DDRewriteRule.h in Headers */,
 				7A2A79771758EB760017F7E0 /* _DDVariableExpression.h in Headers */,
 				7A2A79791758EB760017F7E0 /* _DDVariableTerm.h in Headers */,
-				7A2A797B1758EB760017F7E0 /* DDExpression.h in Headers */,
-				7A2A797D1758EB760017F7E0 /* DDMathEvaluator+Private.h in Headers */,
-				7A2A797E1758EB760017F7E0 /* DDMathEvaluator.h in Headers */,
-				7A2A79801758EB760017F7E0 /* DDMathParser.h in Headers */,
-				7A2A79811758EB760017F7E0 /* DDMathParserMacros.h in Headers */,
-				7A2A79821758EB760017F7E0 /* DDMathStringToken.h in Headers */,
-				7A2A79841758EB760017F7E0 /* DDMathStringTokenizer.h in Headers */,
-				7A2A79861758EB760017F7E0 /* DDParser.h in Headers */,
 				7A2A79881758EB760017F7E0 /* DDParserTypes.h in Headers */,
 				7A2A798A1758EB760017F7E0 /* DDTypes.h in Headers */,
 				7A2A798C1758EB760017F7E0 /* NSString+DDMathParsing.h in Headers */,
