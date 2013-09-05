@@ -89,7 +89,8 @@
 }
 
 - (BOOL) startScanning {
-    
+    NSLog(@"startScanning");
+
     if(_isScanning || _hasPerformedScan)
         return NO;
     
@@ -102,10 +103,12 @@
     
     for (NSString *itemId in _items) {
         
+        NSLog(itemId);
+        
         item = [_items objectForKey:itemId];
         
         for (NSString *modId in _modules) {
-
+            NSLog(modId);
             module = [_modules objectForKey:modId];
             [_scanQueue addOperation:[[[NSInvocationOperation alloc] initWithTarget:module selector:@selector(analyze:) object:[NSArray arrayWithObjects:itemId, item, nil]] autorelease]];
         }
@@ -221,7 +224,8 @@
         NSMutableDictionary *itemEvals = [_computedEvaluations objectForKey:itemId];
         
         if (itemEvals == nil) {
-            itemEvals = [NSMutableDictionary dictionaryWithObject:result forKey:name];
+            id res = result == nil ? [NSNull null] : result;
+            itemEvals = [NSMutableDictionary dictionaryWithObject:res forKey:name];
             [_computedEvaluations setObject:itemEvals forKey:itemId];
         }
         else {
