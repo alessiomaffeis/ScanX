@@ -87,8 +87,7 @@
 }
 
 - (BOOL) startScanning {
-    NSLog(@"startScanning");
-
+    
     if(_isScanning || _hasPerformedScan)
         return NO;
     
@@ -100,17 +99,17 @@
     id <SXModule> module;
     
     for (NSString *itemId in _items) {
-        
-        NSLog(itemId);
-        
+                
         item = [_items objectForKey:itemId];
         
         for (NSString *modId in _modules) {
-            NSLog(modId);
             module = [_modules objectForKey:modId];
             [_scanQueue addOperation:[[[NSInvocationOperation alloc] initWithTarget:module selector:@selector(analyze:) object:[NSArray arrayWithObjects:itemId, item, nil]] autorelease]];
         }
     }
+    
+    [_scanQueue waitUntilAllOperationsAreFinished];
+    [_delegate scanHasFinished];
     
     return YES;
 }
@@ -156,20 +155,17 @@
                        context:(void *)context {
     
     if (object == _scanQueue) {
-        
+                
         if ([keyPath isEqual:@"operationCount"]) {
-            _remainingItems = (NSUInteger)[change valueForKey:NSKeyValueChangeNewKey];
-            
-            if(_remainingItems == 0)
-                [_delegate scanHasFinished];
+
+            // _scanQueue.operationCount
         }
     }
     else if (object == _evalQueue) {
+        
         if ([keyPath isEqual:@"operationCount"]) {
-            _remainingEvaluations = (NSUInteger)[change valueForKey:NSKeyValueChangeNewKey];
             
-            if(_remainingEvaluations == 0)
-                [_delegate evaluationHasFinished];
+            // _evalQueue.operationCount
         }
     }
 }
