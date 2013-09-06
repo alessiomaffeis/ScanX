@@ -24,7 +24,6 @@
         _computedMetrics = [[NSMutableDictionary alloc] init];
         _computedEvaluations = [[NSMutableDictionary alloc] init];
         _scanQueue = [[NSOperationQueue alloc] init];
-        _scanQueue.maxConcurrentOperationCount = 1;
         _evalQueue = [[NSOperationQueue alloc] init];
 
     }
@@ -43,7 +42,6 @@
         _computedMetrics = [[NSMutableDictionary alloc] init];
         _computedEvaluations = [[NSMutableDictionary alloc] init];
         _scanQueue = [[NSOperationQueue alloc] init];
-        _scanQueue.maxConcurrentOperationCount = 1;
         _evalQueue = [[NSOperationQueue alloc] init];
         
         [_items addEntriesFromDictionary:items];
