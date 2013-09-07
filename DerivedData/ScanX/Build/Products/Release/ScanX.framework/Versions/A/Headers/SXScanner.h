@@ -22,7 +22,7 @@
 @property (readonly) NSMutableDictionary *computedMetrics;
 @property (readonly) NSMutableDictionary *computedEvaluations;
 
-@property (readonly) NSUInteger remainingItems;
+@property (readonly) NSUInteger remainingScans;
 @property (readonly) NSUInteger remainingEvaluations;
 
 @property (readonly) BOOL isScanning;

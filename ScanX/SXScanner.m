@@ -98,12 +98,15 @@
     id item;
     id <SXModule> module;
     
-    for (NSString *itemId in _items) {
-                
-        item = [_items objectForKey:itemId];
+    
+    for (NSString *modId in _modules)
+    {
+        module = [_modules objectForKey:modId];
         
-        for (NSString *modId in _modules) {
-            module = [_modules objectForKey:modId];
+        for (NSString *itemId in _items)
+        {
+            item = [_items objectForKey:itemId];
+        
             [_scanQueue addOperation:[[[NSInvocationOperation alloc] initWithTarget:module selector:@selector(analyze:) object:[NSArray arrayWithObjects:itemId, item, nil]] autorelease]];
         }
     }
@@ -158,14 +161,16 @@
                 
         if ([keyPath isEqual:@"operationCount"]) {
 
-            // _scanQueue.operationCount
+            _remainingScans = _scanQueue.operationCount;
+            [_delegate remainingScansDidChange];
         }
     }
     else if (object == _evalQueue) {
         
         if ([keyPath isEqual:@"operationCount"]) {
             
-            // _evalQueue.operationCount
+            _remainingEvaluations = _evalQueue.operationCount;
+            [_delegate remainingEvaluationsDidChange];
         }
     }
 }

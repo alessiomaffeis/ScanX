@@ -12,5 +12,7 @@
 
 - (void) scanHasFinished;
 - (void) evaluationHasFinished;
+- (void) remainingScansDidChange;
+- (void) remainingEvaluationsDidChange;
 
 @end
