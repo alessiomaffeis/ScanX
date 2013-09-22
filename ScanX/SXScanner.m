@@ -73,6 +73,7 @@
     if(_isScanning || _hasPerformedScan)
         return NO;
     
+    module.delegate = self;
     [_modules setObject:module forKey:mId];
     return YES;
 }
@@ -82,6 +83,7 @@
     if(_isEvaluating || _hasPerformedEvaluation)
         return NO;
     
+    evaluation.delegate = self;
     [_evaluations setObject:evaluation forKey:eId];
     return YES;
 }
@@ -129,18 +131,19 @@
         return NO;
     
     _isEvaluating = YES;
-    // id item;
     SXEvaluation *evaluation;
     
-    for (NSString *itemId in _items) {
-        
-        // item = [_items objectForKey:itemId];
-        for (NSString *evalId in _evaluations)
+    for (NSString *evalId in _evaluations)
+    {
+        for (NSString *itemId in _items)
         {
             evaluation = [_evaluations objectForKey:evalId];
-            [_evalQueue addOperation:[[[NSInvocationOperation alloc]initWithTarget:evaluation selector:@selector(evaluate:) object:itemId] autorelease]];
+            [_evalQueue addOperation:[[[NSInvocationOperation alloc]initWithTarget:evaluation selector:@selector(evaluateItem:) object:itemId] autorelease]];
         }
     }
+    
+    [_evalQueue waitUntilAllOperationsAreFinished];
+    [_delegate evaluationHasFinished];
 
     return YES;
 }
@@ -219,7 +222,7 @@
 - (void) storeResult:(NSNumber *) result forItem:(NSString *) itemId withName:(NSString *) name {
     
     @synchronized(_computedEvaluations) {
-    
+        
         NSMutableDictionary *itemEvals = [_computedEvaluations objectForKey:itemId];
         
         if (itemEvals == nil) {

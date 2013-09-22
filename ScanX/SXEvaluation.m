@@ -28,6 +28,7 @@
 - (void) evaluateItem:(NSString *) itemId {
     
     NSDictionary *metrics = [_delegate metricsForItem:itemId];
+    
     NSNumber *value = [_evaluator evaluateString:_expression withSubstitutions:metrics];
     [_delegate storeResult:value forItem:itemId withName:_name];
 }
