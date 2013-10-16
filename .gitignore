@@ -9,4 +9,4 @@ DerivedData/ScanX/*
 DerivedData/ScanX/Build/*
 !DerivedData/ScanX/Build/Products/
 DerivedData/ScanX/Build/Products/*
-!DerivedData/ScanX/Build/Products/Release/
+!DerivedData/ScanX/Build/Products/Debug/
