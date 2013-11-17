@@ -95,8 +95,6 @@
     
     _isScanning = YES;
     
-    [_scanQueue addObserver:self forKeyPath:@"operationCount" options:NSKeyValueObservingOptionNew context:NULL];
-    
     id item;
     id <SXModule> module;
     
@@ -113,6 +111,7 @@
         }
     }
     
+    [_scanQueue addObserver:self forKeyPath:@"operationCount" options:NSKeyValueObservingOptionNew context:NULL];
     [_scanQueue waitUntilAllOperationsAreFinished];
     [_delegate scanHasFinished];
     
@@ -142,6 +141,7 @@
         }
     }
     
+    [_evalQueue addObserver:self forKeyPath:@"operationCount" options:NSKeyValueObservingOptionNew context:NULL];
     [_evalQueue waitUntilAllOperationsAreFinished];
     [_delegate evaluationHasFinished];
 
