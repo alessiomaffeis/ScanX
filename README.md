@@ -7,4 +7,4 @@ The ScanX framework revolves around a handful of simple and clear concepts: the 
 
 Noticeably, there is not a dedicated object for the item, as ScanX does not impose any constraint on the data type of the items that are subjected to analysis.
 
-The SXScanner object transparently manages the collections of items, modules, evaluations and results. Applications based on the ScanX framework can use SXScanner’s instance methods to get them into the loop, start/stop scanning and evaluation, and fetch the results. SXScanner makes use of the delegation design pattern to communicate with its controller object, sending messages to inform it about the status of the analysis, at the appropriate time.
+The SXScanner object transparently manages the collections of items, modules, evaluations and results. Applications based on the ScanX framework can use SXScanner’s instance methods to get them into the loop, start/stop scanning and evaluation, and fetch the results.
